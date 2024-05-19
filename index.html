@@ -18,7 +18,31 @@
   </head>
   <body>
     <!--Header Section-->
-     <header id="webStudio">
+      <header id="webStudio">
+      <section class="mobile-navigation">
+        <div class="container">
+          <div class="logo-mobile">
+            <a href="#webStudio" class="logo-link"
+              ><p class="studio"><span class="span">Web</span>Studio</p></a
+            >
+          </div>
+          <button class="js-open-menu mobile-menu-btn">
+            <svg
+              width="30"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </section>
       <section class="nav-section">
         <div class="container">
           <div class="logo">
@@ -26,15 +50,21 @@
               ><p class="studio"><span class="span">Web</span>Studio</p></a
             >
           </div>
-         <nav class="nav-bar">
+          <nav class="nav-bar">
             <ul class="header__nav-list">
               <li>
-                <a href="./index.html" class="nav-link active">Studio</a>
+                <a href="./index.html" data-active="index.html" class="nav-link"
+                  >Studio</a
+                >
               </li>
               <li>
-                <a href="./portfolio.html" class="nav-link">Portofolio</a>
+                <a href="./portofolio.html" class="nav-link">Portofolio</a>
               </li>
-              <li><a href="#contact"    class="nav-link">Contacts</a></li>
+              <li>
+                <a href="#contact" data-active="#contact" class="nav-link"
+                  >Contacts</a
+                >
+              </li>
             </ul>
           </nav>
           <div class="header__nav-links">
@@ -64,7 +94,7 @@
     </header>
     <main class="main">
       <!--Hero section-->
-      <section class="hero-section">
+       <section class="hero-section">
         <div class="container">
           <div class="hero-section-aile">
             <h1 class="hero-section__title">
@@ -77,7 +107,52 @@
           </div>
         </div>
       </section>
-
+      <!--Mobile Menu-->
+      <div class="js-menu-container">
+        <nav class="nav-bar__mobile">
+          <button class="js-close-menu button-close-nav">x</button>
+          <ul class="header__nav-list-mobile">
+            <li>
+              <a
+                href="./index.html"
+                data-active="index.html"
+                class="nav-link-mobile"
+                >Studio</a
+              >
+            </li>
+            <li>
+              <a href="./portofolio.html" class="nav-link-mobile">Portofolio</a>
+            </li>
+            <li>
+              <a href="#contact" data-active="#contact" class="nav-link-mobile"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="header__nav-links-mobile">
+          <div class="nav-contacts">
+            <a
+              href="mailto:info@devstudio.com"
+              class="nav-contact"
+              target="_blank"
+            >
+              <svg class="nav-icon__item">
+                <use href="./images/icons.svg#icon-envelope" />
+              </svg>
+              <p class="nav-contact__item">info@devstudio.com</p>
+            </a>
+          </div>
+          <div class="nav-contacts">
+            <a href="tel:+1212-772-4150" class="nav-contact" target="_blank">
+              <svg class="nav-icon__item">
+                <use href="./images/icons.svg#icon-smartphone" />
+              </svg>
+              <p class="nav-contact__item">+1 212-772-4150</p>
+            </a>
+          </div>
+        </div>
+      </div>
       <!--About Section-->
       <section class="section" id="studio">
         <div class="container">
@@ -498,7 +573,7 @@
             </div>
           </section>
           <section class="subscribe__section">
-            <div>
+            <div class="subscribe-wrapper">
               <h3 class="subscribe__title">SUBSCRIBE TO THE NEWSLETTER</h3>
               <form name="subscribe__form" class="subscribe__form">
            <label class="subscribe-form__position">
@@ -572,6 +647,7 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll/3.0.3/bodyScrollLock.min.js"></script>
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

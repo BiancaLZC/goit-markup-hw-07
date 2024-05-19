@@ -30,11 +30,11 @@
   display: flex;
   border-bottom: 1px solid var(--border-color);
 }
+
 .container {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  flex-wrap: wrap;
 }
 .nav-section .container {
   display: flex;
@@ -44,13 +44,13 @@
   align-items: center;
   gap: 93px;
 }
-
 .nav-bar {
   display: flex;
   text-align: center;
   margin-left: 0;
   margin-right: auto;
 }
+
 .header__nav-list {
   display: flex;
   gap: 50px;
@@ -128,7 +128,6 @@
   font-family: inherit;
   font-size: 14px;
   color: var(--light-black);
-
   font-weight: 500;
   text-decoration: none;
   align-items: center;
@@ -149,7 +148,8 @@
 }
 /*Hero section style */
 .hero-section .container {
-  max-width: 1600px;
+  width: 1600px;
+  max-width: 100%;
   background-image: linear-gradient(
       to left,
       rgba(47, 48, 58, 0.4),
@@ -224,7 +224,6 @@
   justify-content: center;
   gap: 30px;
   padding-left: 0;
-  flex-wrap: wrap;
 }
 .custom-h2 {
   padding-top: 0;
@@ -236,8 +235,13 @@
   letter-spacing: 0.03em;
 }
 .img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
   position: relative;
 }
+
 .box-name {
   position: absolute;
   bottom: 0;
@@ -262,7 +266,6 @@
 .team-section__cards {
   display: flex;
   gap: 30px;
-  flex-wrap: wrap;
 }
 .team-section__card {
   display: flex;
@@ -327,7 +330,6 @@
   align-items: center;
   padding-top: 50px;
   padding-bottom: 94px;
-  flex-wrap: wrap;
 }
 .customers-section__icon {
   border: 1px solid var(--icon-color);
@@ -385,7 +387,6 @@
   font-weight: 400;
   line-height: 16px;
   color: var(--footer-info-color);
-
   text-decoration: none;
 }
 .address-list__links:hover,
@@ -473,7 +474,6 @@
   opacity: 0px;
   box-shadow: 0px 4px 4px 0px #00000026;
   background-color: var(--primary-background-color);
-  color: var(--white);
 }
 
 .subscribe-form__input::placeholder {
@@ -497,7 +497,7 @@
   opacity: 0px;
   background-color: var(--blue);
   color: var(--white);
-  font-family: var(--primary-font);
+  font-family: Roboto;
   font-size: 16px;
   font-weight: 700;
   line-height: 30px;
@@ -505,10 +505,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
   outline: none;
   border: none;
-  cursor: pointer;
 }
 
 /*Portfolio style*/
@@ -783,5 +782,205 @@
   margin: 30px;
   margin-left: 130px;
 }
-@media screen and (max-width: 1200px) {
+.logo-mobile {
+  display: none;
+}
+.js-menu-container {
+  display: none;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  background-color: var(--white);
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.is-open {
+  display: none;
+}
+.js-open-menu {
+  display: none;
+}
+@media screen and (min-width: 428px) and (max-width: 767px) {
+  .mobile-navigation .container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -15px;
+    margin-bottom: -15px;
+  }
+  .mobile-menu-btn {
+    background-color: var(--white);
+    border: none;
+    padding: 0 0;
+  }
+
+  .logo-mobile {
+    display: block;
+  }
+  .logo-mobile .logo-link {
+    font-family: var(--secondary-font);
+    font-size: 24px;
+    line-height: 28.18px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: var(--light-black);
+  }
+  .logo-mobile .logo-link .studio .span {
+    color: var(--blue);
+  }
+  .nav-section .container {
+    display: none;
+  }
+  .js-open-menu {
+    display: block;
+  }
+
+  .button-close-nav {
+    width: 20px;
+    margin: 15px 0;
+    margin-left: 85%;
+    border: none;
+    background-color: var(--white);
+    font-size: 20px;
+  }
+  .header__nav-list-mobile {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding-top: 36px;
+  }
+  .nav-link-mobile {
+    font-family: inherit;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 46.88px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    text-decoration: none;
+    color: var(--light-black);
+  }
+  .nav-link-mobile:hover,
+  .nav-link-mobile:focus {
+    color: var(--blue);
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  }
+  .section {
+    padding: 60px 0;
+    margin: 0 auto;
+    width: 428px;
+  }
+  .container {
+    padding: 0 10px;
+    margin: 0 auto;
+    width: 398px;
+  }
+  /* Hero section */
+  .hero-section-contend {
+    padding: 60px 0 80px;
+  }
+  .hero-section .hero-section__title {
+    font-size: 26px;
+    padding: 0 30px;
+    line-height: 42px;
+  }
+  .hero-section__title br {
+    display: none;
+  }
+  /* About section */
+  .about-us-section__list {
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 0;
+  }
+
+  .about-us-section__title {
+    text-align: center;
+  }
+  /* What we do */
+  .what-we-do {
+    display: none;
+  }
+  .custom-h2 {
+    display: none;
+  }
+
+  /* Team section */
+  .team-section__cards {
+    flex-direction: column;
+  }
+  /* Customers section */
+  .customers-section__icons {
+    flex-wrap: wrap;
+  }
+  .customers-section__icon {
+    padding: 16px 40px;
+  }
+  /* foter sction */
+  .footer-section .container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .find-us__section {
+    align-items: center;
+  }
+  /* subscribe section */
+  .subscribe__title {
+    text-align: center;
+  }
+  .subscribe-wrapper {
+    flex-direction: column;
+  }
+  .subscribe-form__btn {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  /* Portofolio */
+  .btn-list {
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: -20px;
+  }
+  .our-projects {
+    justify-content: center;
+    padding: 30px 10px;
+  }
+  .our-projects__title {
+    padding: 0px 0 4px 24px;
+  }
+  .our-projects__subtitle {
+    padding: 0 0 0px 24px;
+    margin-top: -20px;
+  }
+  /* data modal */
+  [data-modal-contend] {
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    width: 398px;
+    height: 609px;
+  }
+  .modal-title {
+    padding: 30px 20px 0 0;
+  }
+  .modal-form {
+    padding: 0 20px;
+  }
+  .modal-form__checked {
+    flex-direction: row;
+    gap: 5px;
+    font-size: 12px;
+  }
+  .conditions {
+    font-size: 12px;
+  }
 }
