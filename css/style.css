@@ -21,11 +21,7 @@
   margin: 0;
   padding: 0;
 }
-.container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
+
 .section {
   padding: 94px 0;
 }
@@ -34,7 +30,12 @@
   display: flex;
   border-bottom: 1px solid var(--border-color);
 }
-
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
 .nav-section .container {
   display: flex;
   justify-content: space-between;
@@ -148,14 +149,13 @@
 }
 /*Hero section style */
 .hero-section .container {
-  width: 100%;
   max-width: 1600px;
   background-image: linear-gradient(
       to left,
       rgba(47, 48, 58, 0.4),
       rgba(196, 196, 196, 0.1)
     ),
-    url(../images/hero-bg-img.jpg);
+    url(../images/hero-bg-img@x1.jpg);
   background-size: cover;
 }
 
@@ -224,6 +224,7 @@
   justify-content: center;
   gap: 30px;
   padding-left: 0;
+  flex-wrap: wrap;
 }
 .custom-h2 {
   padding-top: 0;
@@ -261,6 +262,7 @@
 .team-section__cards {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 .team-section__card {
   display: flex;
@@ -325,6 +327,7 @@
   align-items: center;
   padding-top: 50px;
   padding-bottom: 94px;
+  flex-wrap: wrap;
 }
 .customers-section__icon {
   border: 1px solid var(--icon-color);
@@ -779,4 +782,6 @@
   border-radius: 4px;
   margin: 30px;
   margin-left: 130px;
+}
+@media screen and (max-width: 1200px) {
 }
