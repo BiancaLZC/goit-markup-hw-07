@@ -17,32 +17,8 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!--Header Section-->
-      <header id="webStudio">
-      <section class="mobile-navigation">
-        <div class="container">
-          <div class="logo-mobile">
-            <a href="#webStudio" class="logo-link"
-              ><p class="studio"><span class="span">Web</span>Studio</p></a
-            >
-          </div>
-          <button class="js-open-menu mobile-menu-btn">
-            <svg
-              width="30"
-              height="24"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-        </div>
-      </section>
+     <!--Header section -->
+     <header id="webStudio">
       <section class="nav-section">
         <div class="container">
           <div class="logo">
@@ -50,21 +26,33 @@
               ><p class="studio"><span class="span">Web</span>Studio</p></a
             >
           </div>
-          <nav class="nav-bar">
+          <div class="js-mobile__btn">
+          <button type="button" class=" js-open-menu" aria-expanded="false"
+				aria-controls="mobile-menu">
+         <svg
+          width="24"
+          height="24"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+          </button>
+          </div>
+         <nav class="nav-bar">
             <ul class="header__nav-list">
               <li>
-                <a href="./index.html" data-active="index.html" class="nav-link"
-                  >Studio</a
-                >
+                <a href="./index.html" class="nav-link active">Studio</a>
               </li>
               <li>
-                <a href="./portofolio.html" class="nav-link">Portofolio</a>
+                <a href="./portfolio.html" class="nav-link">Portofolio</a>
               </li>
-              <li>
-                <a href="#contact" data-active="#contact" class="nav-link"
-                  >Contacts</a
-                >
-              </li>
+              <li><a href="#contact"    class="nav-link">Contacts</a></li>
             </ul>
           </nav>
           <div class="header__nav-links">
@@ -94,7 +82,7 @@
     </header>
     <main class="main">
       <!--Hero section-->
-       <section class="hero-section">
+      <section class="hero-section">
         <div class="container">
           <div class="hero-section-aile">
             <h1 class="hero-section__title">
@@ -107,24 +95,20 @@
           </div>
         </div>
       </section>
-      <!--Mobile Menu-->
-      <div class="js-menu-container">
+       <div class="js-menu-container">
         <nav class="nav-bar__mobile">
-          <button class="js-close-menu button-close-nav">x</button>
-          <ul class="header__nav-list-mobile">
+          <button class="js-close-menu">X</button>
+          <ul class="header__nav-list">
             <li>
-              <a
-                href="./index.html"
-                data-active="index.html"
-                class="nav-link-mobile"
+              <a href="./index.html" data-active="index.html" class="nav-link"
                 >Studio</a
               >
             </li>
             <li>
-              <a href="./portofolio.html" class="nav-link-mobile">Portofolio</a>
+              <a href="./portofolio.html" class="nav-link">Portofolio</a>
             </li>
             <li>
-              <a href="#contact" data-active="#contact" class="nav-link-mobile"
+              <a href="#contact" data-active="#contact" class="nav-link"
                 >Contacts</a
               >
             </li>
@@ -137,19 +121,30 @@
               class="nav-contact"
               target="_blank"
             >
-              <svg class="nav-icon__item">
-                <use href="./images/icons.svg#icon-envelope" />
-              </svg>
-              <p class="nav-contact__item">info@devstudio.com</p>
+              <p class="nav-contact">info@devstudio.com</p>
             </a>
           </div>
           <div class="nav-contacts">
             <a href="tel:+1212-772-4150" class="nav-contact" target="_blank">
-              <svg class="nav-icon__item">
-                <use href="./images/icons.svg#icon-smartphone" />
-              </svg>
-              <p class="nav-contact__item">+1 212-772-4150</p>
+              <p class="nav-contact">+1 212-772-4150</p>
             </a>
+          </div>
+        </div>
+        <div class="social-links">
+          <div class="social-link social-links_item">
+            <a href="https://www.instagram.com/">Instagram</a>
+          </div>
+          <div class="social-links__vertical-line"></div>
+          <div class="social-link social-links_item">
+            <a href="https://www.twitter.com/">Twitter</a>
+          </div>
+          <div class="social-links__vertical-line"></div>
+          <div class="social-link social-links_item">
+            <a href="https://www.facebook.com/">Facebook</a>
+          </div>
+          <div class="social-links__vertical-line"></div>
+          <div class="social-link">
+            <a href="https://www.linkedin.com/">Linkedin</a>
           </div>
         </div>
       </div>
@@ -232,7 +227,9 @@
               src="./images/box-1@x1.jpg"
               alt="Person typing on a keyboard while looking at a diagram"
               width="370"
-              height="294"
+              height="294" srcset="
+              ./images/box-1@x1.jpg x1,
+              ./images/box-1@x2 x2"
             />
           </div>
            <div class="img-box">
@@ -243,7 +240,9 @@
               src="./images/box-2@x1.jpg"
               alt="Person holding a smartphone in one hand and working on a laptop with the other"
               width="370"
-              height="294"
+              height="294" srcset="
+              ./images/box-2@x1.jpg x1,
+              ./images/box-2@x2 x2"
             />
             </div>
             <div class="img-box">
@@ -254,7 +253,9 @@
               src="./images/box-3@x1.jpg"
               alt="Person holding a pen in their right hand while examining a color picker on a tablet screen"
               width="370"
-              height="294"
+              height="294" srcset="
+              ./images/box-3@x1.jpg x1,
+              ./images/box-3@x2 x2"
             />
             </div>
           </div>
@@ -271,7 +272,9 @@
                   src="./images/img-2@x1.jpg"
                   width="270"
                   height="260"
-                  alt="Photo of Christopher Walker our Product Designer"
+                  alt="Photo of Christopher Walker our Product Designer" srcset="
+                  ./images/img-2@x1.jpg x1,
+                  ./images/img-2@x2.jpg x2"
                 />
                 <h3 class="team-section__h3">Christopher Walker</h3>
                 <p class="team-section__subtitle">Product Designer</p>
@@ -583,6 +586,7 @@
               <use href="./images/icons/icon.svg.svg#icon-send-icon"></use>
             </svg>
             </button> 
+           </label>
             </div>
           </section>
         </div>
