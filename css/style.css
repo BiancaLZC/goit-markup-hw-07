@@ -830,7 +830,6 @@
     fill: var(--blue);
   }
   .js-menu-container {
-    display: none;
     position: fixed;
     top: 0px;
     right: 0;
@@ -851,7 +850,7 @@
   .js-close-menu {
     width: 20px;
     margin: 15px 0;
-    margin-left: 70%;
+    margin-left: 90%;
     border: none;
     color: var(--black);
     background-color: var(--white);
@@ -992,6 +991,18 @@
     display: flex;
     margin: 0 auto;
   }
+  /*Modal*/
+  [data-modal-content] {
+    width: 428px;
+    height: 581px;
+    background-color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition-duration: 1s;
+    padding: 20px;
+  }
 }
 /* Tablet 768 / 1158*/
 @media screen and (min-width: 768px) and (max-width: 1158px) {
@@ -1022,12 +1033,12 @@
     fill: var(--blue);
   }
   .js-menu-container {
-    display: none;
     position: fixed;
     top: 0px;
     right: 0;
     background-color: var(--white);
-    margin: 0 auto;
+    margin: 0-10px;
+
     height: 100%;
     width: 100%;
     display: flex;
@@ -1042,8 +1053,8 @@
   }
   .js-close-menu {
     width: 20px;
-    margin: 15px 0;
-    margin-left: 70%;
+    margin: 20px 0;
+    margin-left: 90%;
     border: none;
     color: var(--black);
     background-color: var(--white);
